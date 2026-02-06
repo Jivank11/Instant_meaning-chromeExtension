@@ -1,0 +1,62 @@
+/* Main cloud box */
+#definition-cloud-box {
+  position: absolute;
+  z-index: 9999;
+  background: #ffffff;
+  color: #333;
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  padding: 10px;
+  max-width: 350px;
+  word-wrap: break-word;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Cloud box header */
+.cloud-header {
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Cloud box body */
+.cloud-body {
+  padding: 10px;
+}
+
+.cloud-body p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Arrow pointing to the selected word */
+#definition-cloud-box:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
