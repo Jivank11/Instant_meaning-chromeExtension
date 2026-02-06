@@ -10,7 +10,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   if (info.menuItemId === "getWordMeaning") {
     const selectedWord = info.selectionText;
     if (selectedWord) {
-      const response = await fetch(`AIzaSyBThZS0lIKkymjtlDwJ2VBSHG1kRJtrO2k${selectedWord}`);
+      const response = await fetch(``); // `your-api-key-here${selectedWord}`
       const data = await response.json();
       chrome.scripting.executeScript({
         target: { tabId: tab.id },
@@ -26,3 +26,4 @@ function showDefinition(word, data) {
   const message = `Word: ${word}\nMeaning: ${meaning}`;
   alert(message);
 }
+
